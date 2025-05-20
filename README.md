@@ -29,17 +29,32 @@ For SQUID_INK, we used a stochastic oscillator to find possible trend reversals.
 
 ---
 
-## Round 2
+## ⚙️ Strategy Overview – Round 2
 
-In Round 2, we continued using the same base logic for **RAINFOREST_RESIN**, **KELP**, and **SQUID_INK**, with slight improvements and added support for new products introduced in this round.
-
-
-### PICNIC_BASKET1 & PICNIC_BASKET2 – Basket Arbitrage with Hedging
-
-New to this round were two basket products made of underlying components like CROISSANTS, JAMS, and DJEMBES. We implemented a **arbitrage strategy**: calculating the fair value of the basket using its components, comparing it with the market price, and trading when the mispricing crossed a dynamic threshold. Basket orders were always **hedged** using component legs to reduce directional risk.
+In Round 2, we continued using the same base logic for **RAINFOREST_RESIN**, **KELP**, and **SQUID_INK**, with slight improvements. The main focus was on extending the strategy to support newly introduced assets: **PICNIC_BASKET1**, **PICNIC_BASKET2**, **CROISSANTS**, **JAMS**, and **DJEMBES**.
 
 ---
 
+### PICNIC_BASKET1 & PICNIC_BASKET2 – Basket Arbitrage with Component Hedging
 
+We introduced a **basket arbitrage strategy** for PICNIC_BASKET1 and PICNIC_BASKET2. The idea was to compute a theoretical price for each basket based on its components (e.g., CROISSANTS, JAMS, DJEMBES) and compare it with the live market price.
 
+- If the basket was overpriced, we sold it and bought the components.
+- If it was underpriced, we bought the basket and sold the components.
+- All trades were **hedged** using component legs to keep exposure balanced.
+- A **dynamic threshold** was used to account for volatility and avoid false signals.
 
+---
+
+### CROISSANTS, JAMS, DJEMBES – Used Only for Hedging
+
+These products were **not traded independently**. They were used exclusively for hedging the basket positions during arbitrage trades. Volumes were calculated based on the basket composition to neutralize exposure after a PICNIC_BASKET1 or 2 trade.
+
+---
+
+### Minor Adjustments
+
+- **RAINFOREST_RESIN** and **KELP**: Slight tuning to edge widths and fair value smoothing.
+- **SQUID_INK**: Refined reversion model and filtered price levels to reduce overtrading during noise.
+
+---
