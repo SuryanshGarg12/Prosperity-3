@@ -12,7 +12,8 @@ This repository contains the codebase we developed throughout the competition. W
 
 ### RAINFOREST_RESIN – Mean Reversion with Adaptive Quoting
 
-For RAINFOREST_RESIN, we used a simple mean-reversion strategy. A rolling average of the mid-price (over the last 10 ticks) was used as a fair value estimate. If the market offered prices significantly away from this fair value, we took them using market orders. Otherwise, we placed passive limit orders slightly outside the fair value. Position size was monitored, and quotes were adjusted if the position became too large.
+Rainforest Resin was the simplest asset to trade since its price reliably oscillated around 10,000. We set initial thresholds to buy at ≤ 9,999 and sell at ≥ 10,001, then introduced a dynamic “edge” that, when orders at (9,999 buy, 10,001 sell) filled consistently, widened the band to buy at ≤ 9,998 and sell at ≥ 10,002, and, if fills became infrequent, narrowed it back to the original levels.
+
 
 ---
 
