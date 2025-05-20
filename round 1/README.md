@@ -4,10 +4,10 @@ There were a total of 3 assets we had to trade in this round. Here are the strat
 
 * **Rainforest Resin**: It was a simple asset to trade as it's price reliably oscillated around 10,000. We implemented a simple adaptive buy‑low, sell‑high approach that automatically adjusted its thresholds based on execution success:
 
-- Initial thresholds: buy at ≤ 9,999 and sell at ≥ 10,001
-- Dynamic “edge” adjustment:
-- If orders at (9,999 buy, 10,001 sell) filled consistently, widen to (9,998 buy, 10,002 sell)
-- If fills became infrequent, narrow the band back to the previous levels
+Initial thresholds: buy at ≤ 9,999 and sell at ≥ 10,001
+Dynamic “edge” adjustment:
+If orders at (9,999 buy, 10,001 sell) filled consistently, widen to (9,998 buy, 10,002 sell)
+If fills became infrequent, narrow the band back to the previous levels
 
 * **Kelp** is a cautious market maker. It focuses on trades with enough volume to avoid being picked off by large players. It estimates a fair price, leans toward mean reversion, and cleanly rebalances its inventory if it strays too far from neutral.
 
