@@ -8,6 +8,19 @@ This repository contains the codebase we developed throughout the competition. W
 
 ---
 
+## Round-wise Performance
+
+| Round   | Algo Score | Manual Score | Rank |
+|---------|------------|---------------|------|
+| Round 1 | 0.000      | 44.340        | 2344 |
+| Round 2 | 37.126     | 26.015        | 1180 |
+| Round 3 | 234.523    | 51.500        | 194  |
+| Round 4 | 137.892    | 61.002        | 82   |
+| Round 5 | 12.084     | 154.505       | 87   |
+| **Total** | **758.987** |               |      |
+
+---
+
 ## Round 1
 
 ### RAINFOREST_RESIN – Mean Reversion with Adaptive Quoting
