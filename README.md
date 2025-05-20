@@ -71,3 +71,39 @@ These products were **not traded independently**. They were used exclusively for
 - **SQUID_INK**: Refined reversion model and filtered price levels to reduce overtrading during noise.
 
 ---
+
+## 🔥 Round 3 – Volatility and Vouchers
+
+Round 3 added new dimensions to the trading landscape, notably with **VOLCANIC_ROCK** and its **VOUCHERS**. We expanded our system while preserving all previous strategies.
+
+---
+
+### VOLCANIC_ROCK – Z-Score Mean Reversion
+
+We implemented a **mean reversion strategy** using Z-score logic over a rolling 50-tick window:
+
+- Computed rolling mean and standard deviation of mid-prices.
+- If Z-score < -1.9, we entered a **long** position.
+- If Z-score > +1.9, we entered a **short** position.
+- Position sizing was controlled using current exposure vs. soft limits.
+
+This approach profited from temporary overreactions in price while managing risk via thresholds.
+
+---
+
+### VOUCHERS – Paired Mean Reversion by Strike
+
+Each voucher (e.g., **VOUCHER_9500**, **VOUCHER_9750**, etc.) was handled using a **strike-specific threshold** for Z-score entry:
+
+- When price deviated significantly (Z > threshold), a trade was executed in the **opposite direction** of the deviation.
+- This strategy allowed for **directional bets** when mispricings occurred in relation to VOLCANIC_ROCK.
+
+---
+
+### Minor Enhancements
+
+- Expanded inventory control and Z-score tracking.
+- Added volatility-aware execution and smoothing on key indicators.
+- Integrated minimal persistent state with `jsonpickle` to retain history during backtesting.
+
+---
