@@ -72,7 +72,7 @@ These products were **not traded independently**. They were used exclusively for
 
 ---
 
-## 🔥 Round 3 – Volatility and Vouchers
+## Round 3 – Volatility and Vouchers
 
 Round 3 added new dimensions to the trading landscape, notably with **VOLCANIC_ROCK** and its **VOUCHERS**. We expanded our system while preserving all previous strategies.
 
@@ -107,3 +107,56 @@ Each voucher (e.g., **VOUCHER_9500**, **VOUCHER_9750**, etc.) was handled using 
 - Integrated minimal persistent state with `jsonpickle` to retain history during backtesting.
 
 ---
+
+## Round 4 – Volatility, Adaptation & Cross-Market Arbitrage
+
+Round 4 significantly expanded our trading system, introducing **MAGNIFICENT_MACARONS**, **SUNLIGHT-based risk triggers**, and more robust **volatility-aware options strategies** on **VOLCANIC_ROCK VOUCHERS**.
+
+---
+
+### MAGNIFICENT_MACARONS – Cross-Market Arbitrage with Adaptive Quoting
+
+We developed a **cross-market arbitrage strategy** that used foreign market data and conversion costs to calculate **implied bid/ask prices**. Key innovations included:
+
+- **Edge adaptation**: The quoting edge dynamically adjusted based on recent position volumes and market aggressiveness.
+- **Aggressive unwinding**: If SUNLIGHT levels stayed below a critical threshold for multiple ticks, all MACARONS positions were aggressively cleared at market.
+- **Filtered execution**: Only traded against favorable levels (filtered by size) to avoid adverse selection.
+
+---
+
+### VOLCANIC_ROCK VOUCHERS – Dual Strategy Switching
+
+We introduced two volatility-driven strategies for options:
+
+1. **IV Momentum Strategy**:
+   - Traded based on short vs. long EWMA IV crossover.
+   - Positioned long/short depending on the directional IV trend.
+
+2. **Arbitrage Strategy**:
+   - Compared live mid-prices against Black-Scholes theoretical values with a dynamic buffer.
+   - Executed trades when prices deviated from theory, sizing based on **vega** and **risk budget**.
+
+A **meta-strategy** switched between the two based on recent profitability.
+
+---
+
+### SUNLIGHT Risk Filter
+
+To manage **exogenous environmental risk**, we:
+
+- Monitored SUNLIGHT index for MACARONS.
+- If readings stayed below 45 for 10 consecutive ticks, we immediately exited MACARONS positions.
+- Prevented new entries until SUNLIGHT normalized.
+
+---
+
+### Other Improvements
+
+- **RAINFOREST_RESIN**: No changes – base logic preserved.
+- **KELP**: Improved quote filtering and smoother fair value adjustment.
+- **PICNIC_BASKETS**: Enhanced dynamic thresholds and volume scaling for hedged arbitrage.
+- **SQUID_INK**: Minor tuning of entry edges and reversion parameters.
+- **JAMS**: New strategy using a stochastic oscillator to time reversion entries/exits.
+
+---
+
