@@ -33,13 +33,6 @@ For SQUID_INK, we used a stochastic oscillator to find possible trend reversals.
 
 In Round 2, we continued using the same base logic for **RAINFOREST_RESIN**, **KELP**, and **SQUID_INK**, with slight improvements and added support for new products introduced in this round.
 
----
-
-### KELP
-
-KELP’s strategy was carried over with minimal changes. The beta parameter and book filters were tuned slightly to perform better in the updated environment.
-
----
 
 ### PICNIC_BASKET1 & PICNIC_BASKET2 – Basket Arbitrage with Hedging
 
@@ -47,10 +40,6 @@ New to this round were two basket products made of underlying components like CR
 
 ---
 
-### SQUID_INK
 
-We changed the logic from round-1, It now used a basic reversion model based on filtered mid-prices and included liquidity-aware quoting. Entry thresholds and order filters were refined to better handle spiky price moves common in this asset.
-
----
 
 
