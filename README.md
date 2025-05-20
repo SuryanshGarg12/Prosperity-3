@@ -8,7 +8,7 @@ This repository contains the codebase we developed throughout the competition. W
 
 ---
 
-## Round-wise Performance
+## Results
 
 | Round   | Algo Score | Manual Score | **Total Score** | Rank |
 |---------|------------|---------------|------------------|------|
