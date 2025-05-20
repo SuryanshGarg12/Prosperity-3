@@ -17,7 +17,7 @@ This repository contains the codebase we developed throughout the competition. W
 | Round 3 | 234.523    | 51.500        | 286.023          | 194  |
 | Round 4 | 137.892    | 61.002        | 198.894          | 82   |
 | Round 5 | 12.084     | 154.505       | 166.589          | 87   |
-| **Total** | **421.625** | **337.362** | **758.987**       |      |
+| **Total** | **421.625** | **337.362** | **758.987**       |  **87**    |
 
 ---
 
