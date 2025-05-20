@@ -1,6 +1,6 @@
 ## Simple Overview
 
-This trading bot runs three independent strategies, each tailored to a different product. In everyday language:
+Here is a simple overview of the three assets we traded in this round:
 
 * **Rainforest Resin** acts like a friendly market maker: it watches the average of recent prices and tries to buy when the price is a bit low or sell when it’s a bit high. It also places limit orders to provide steady liquidity, gently nudging prices back toward fair levels.
 
