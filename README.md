@@ -10,14 +10,14 @@ This repository contains the codebase we developed throughout the competition. W
 
 ## Round-wise Performance
 
-| Round   | Algo Score | Manual Score | Rank |
-|---------|------------|---------------|------|
-| Round 1 | 0.000      | 44.340        | 2344 |
-| Round 2 | 37.126     | 26.015        | 1180 |
-| Round 3 | 234.523    | 51.500        | 194  |
-| Round 4 | 137.892    | 61.002        | 82   |
-| Round 5 | 12.084     | 154.505       | 87   |
-| **Total** | **758.987** |               |      |
+| Round   | Algo Score | Manual Score | **Total Score** | Rank |
+|---------|------------|---------------|------------------|------|
+| Round 1 | 0.000      | 44.340        | 44.340           | 2344 |
+| Round 2 | 37.126     | 26.015        | 63.141           | 1180 |
+| Round 3 | 234.523    | 51.500        | 286.023          | 194  |
+| Round 4 | 137.892    | 61.002        | 198.894          | 82   |
+| Round 5 | 12.084     | 154.505       | 166.589          | 87   |
+| **Total** | **421.625** | **337.362** | **758.987**       |      |
 
 ---
 
